@@ -10,13 +10,7 @@ The solution contains three projects:
 
 Open `RACEDAY.sln` from this folder in Visual Studio 2022.
 
-## First-time database update
 
-The Part 3 MVC features add the following API database fields:
-
-- `Event.Description`
-- `Event.BannerImagePath`
-- `Participant.ProfileImagePath`
 
 After opening the solution and restoring NuGet packages, opened **Tools → NuGet Package Manager → Package Manager Console**.
 
