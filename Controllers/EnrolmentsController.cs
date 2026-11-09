@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RaceDay.Api.Data;
 using RaceDay.Api.Models;
 
-namespace RaceDay.Api.Controllers;
+namespace RaceDay.Api.Controllers; 
 
 [ApiController]
 [Route("api/enrolments")]
