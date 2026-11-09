@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+<DefaultItemExcludes>$(DefaultItemExcludes);RaceDay.Web/**;RaceDay.Api.Tests/**</DefaultItemExcludes>
+  </PropertyGroup>
+
+<ItemGroup>
+    <!-- Exclude MVC C# files from the API -->
+    <Compile Remove="RaceDay.Web/**/*.cs" />
+
+    <!-- Exclude MVC Razor views from the API -->
+    <RazorGenerate Remove="RaceDay.Web/**/*.cshtml" />
+
+    <!-- Exclude MVC content files from the API -->
+    <Content Remove="RaceDay.Web/**/*" />
+
+    <!-- Exclude test files from the API -->
+    <Compile Remove="RaceDay.Api.Tests/**/*.cs" />
+    <RazorGenerate Remove="RaceDay.Api.Tests/**/*.cshtml" />
+</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+</Project>
